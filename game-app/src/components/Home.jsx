@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Home = () => {
     const [count, setCount] = useState(0);
-    const [name, setName] = useState('');
+    const [name, setName] = useState('Merry Christmas');
     const [buttonClicked, setButtonClicked] = useState(false);
 
     // const getRandomNumber=()=>{
@@ -57,8 +57,8 @@ const Home = () => {
   return (
     <div className='container'>
         <div className="card">
-            <h1>Random Number</h1>
-            <p>Generate a random number</p>
+            <h1>Secret Santa</h1>
+            <p>Generate your friend's Name</p>
             <button onClick={getRandomName} disabled={count >= 1}>Click Here</button>
             <p className='counter'>{name}</p>
         </div>
