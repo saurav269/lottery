@@ -25,6 +25,10 @@ const Login = () => {
       if (res && res.data.success) {
         // Set authentication state upon successful login
          // Ensure loginUser is defined and callable
+         const { name, _id } = res.data.user;
+      // Save user's name and ID in localStorage
+         localStorage.setItem('userId', _id);
+         localStorage.setItem('userName', name);
          if (typeof loginUser === 'function') {
             // Set authentication state upon successful login
             loginUser(res.data.token);
